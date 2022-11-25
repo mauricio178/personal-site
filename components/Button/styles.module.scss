@@ -1,0 +1,77 @@
+.white,
+.white_fill,
+.black,
+.black_fill, .green {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    border-radius: 10px;
+    padding: 0 .5rem;
+
+    &:hover {
+        transition: .3s;
+        cursor: pointer;
+        background-color: var(--white);
+
+        p {
+            transition: .3s;
+            font-weight: bold;
+            color: var(--gray-800);
+
+        }
+    }
+}
+
+.white {
+    border: 1px solid white;
+
+    p {
+        color: var(--white);
+    }
+}
+
+.white_fill {
+    border: 1px solid white;
+    background-color: var(--white);
+
+    p {
+        color: var(--gray-800);
+    }
+}
+
+.white {
+    border: 1px solid white;
+
+    p {
+        color: var(--white);
+    }
+}
+
+.white {
+    border: 1px solid white;
+
+    p {
+        color: var(--white);
+    }
+}
+
+.green {
+    border: 1px solid #159d1e;
+    background-color: var(--green);
+
+    p{
+        color: var(--white);
+    }
+
+    &:hover {
+        transition: .4s;
+        cursor: pointer;
+        background: var(--white);
+
+        p {
+            color: var(--green);
+        }
+    }
+}
