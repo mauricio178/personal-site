@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap');
 
 html,
+button,
+a,
+h1, h1,h3,
 body {
   padding: 0;
   margin: 0;

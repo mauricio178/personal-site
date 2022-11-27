@@ -1,21 +1,21 @@
-import React from 'react'
+import React, { HTMLAttributes } from 'react'
 import styles from './styles.module.scss'
 
-type ButtonProps = {
+type ButtonProps = HTMLAttributes<HTMLButtonElement> & {
     label: string
     theme: 'white' | 'white fill' | 'black fill' | 'black' | 'green'
 }
 
-export function Button(data: ButtonProps) {
+export function Button({label, theme, ...rest}: ButtonProps) {
     return (
-        <div className={data.theme === 'white' ? styles.white : 
-            data.theme === 'white fill' ? styles.white_fill :
-            data.theme === 'black' ? styles.black :
-            data.theme === 'green' ? styles.green :
-            data.theme === 'black fill' ? styles.black_fill : styles.none}>
+        <button {...rest} className={theme === 'white' ? styles.white : 
+            theme === 'white fill' ? styles.white_fill :
+            theme === 'black' ? styles.black :
+            theme === 'green' ? styles.green :
+            theme === 'black fill' ? styles.black_fill : styles.none} >
             <p>
-                {data.label}
+                {label}
             </p>
-        </div>
+        </button>
     )
 }

@@ -39,7 +39,7 @@
                 .whatsapp {
                     display: flex;
                     align-items: center;
-                    justify-content: flex-start;
+                    justify-content: space-between;
                     margin-bottom: 2rem;
                     border: 1px solid transparent;
 
@@ -68,7 +68,7 @@
                 .linkedin {
                     display: flex;
                     align-items: center;
-                    justify-content: flex-start;
+                    justify-content: space-between;
                     margin-bottom: 2rem;
                     border: 1px solid transparent;
 
@@ -97,10 +97,10 @@
                 .github {
                     display: flex;
                     align-items: center;
-                    justify-content: flex-start;
+                    justify-content: space-between;
                     margin-bottom: 2rem;
                     border: 1px solid transparent;
-                 
+
                     img {
                         margin-right: 1rem;
                     }
@@ -112,6 +112,13 @@
                         width: 80%;
                         display: flex;
                         justify-content: center;
+
+                        &:hover {
+                            transition: .3s;
+                            cursor: pointer;
+                            background-color: var(--white);
+                            color: var(--black);
+                        }
                     }
                 }
 
@@ -121,7 +128,7 @@
                     justify-content: flex-start;
                     margin-bottom: 2rem;
                     border: 1px solid transparent;
-                 
+
                     svg {
                         font-size: 2rem;
                         margin-right: 1rem;
@@ -149,8 +156,9 @@
         }
 
         .sitemap {
+            display: none;
             width: 50%;
-            display: flex;
+            // display: flex;
             padding-left: 2rem;
             align-items: center;
             justify-content: space-between;
@@ -168,6 +176,17 @@
             .col {
                 display: flex;
                 flex-direction: column;
+                color: var(--gray-100);
+
+                >p{
+
+                    &:hover{
+                        transition: .2s;
+                        color: var(--white);
+                        cursor: pointer;
+
+                    }
+                }
             }
 
             h2 {
@@ -218,7 +237,7 @@
             .contacts {
                 width: 80%;
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
                 flex-direction: column;
                 justify-content: space-between;
 
@@ -235,16 +254,18 @@
             }
 
             .sitemap {
-                width: 100%;
-                display: flex;
-                align-items: center;
+                width: 80%;
+                // display: flex;
+                align-items: flex-start;
                 justify-content: space-between;
                 flex-direction: column;
+                padding-left: 0;
 
                 .list {
                     display: flex;
                     flex-direction: row;
                     flex-wrap: wrap;
+                    align-items: flex-start;
                 }
 
                 .col {
@@ -269,7 +290,7 @@
                 justify-content: center;
                 flex-direction: row;
 
-                p{
+                p {
                     font-size: .7rem;
                 }
 

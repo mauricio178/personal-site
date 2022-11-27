@@ -10,12 +10,12 @@ type BannerWorkProps = {
 
 export function BannerWork(data: BannerWorkProps) {
     return (
-        <div className={styles.container}>
-            <Image src={data.banner} alt={data.name} width={'200'} height={'120'}/>
+        <li className={styles.container}>
+            <Image src={data.banner} alt={data.name} width={'230'} height={'140'}/>
             <p>
                 {data.name}
             </p>
             <BsFillInfoCircleFill/>
-        </div>
+        </li>
     )
 }

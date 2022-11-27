@@ -44,12 +44,16 @@ export default function Home() {
       name: "Moovre Project"
     },
     {
-      banner: '/work1.png',
-      name: "Example Project"
+      banner: '/gpmanager.png',
+      name: "GP Manager"
     },
+    // {
+    //   banner: '/player-community.png',
+    //   name: "Another Project"
+    // },
     {
-      banner: '/work1.png',
-      name: "Another Project"
+      banner: '/ig.news.png',
+      name: "IG News"
     },
   ]
 
@@ -102,13 +106,13 @@ export default function Home() {
 
       <Header />
 
-      <div className={styles.hello}>
+      <div className={styles.hello} id={"top"}>
         <h1 className={styles.title}>Hi there!</h1>
         <h3 className={styles.label}>I'm <span>Mauricio Rodrigues</span> and act in <br /> <span>Development Front end</span> area</h3>
         <p className={styles.legend}>it's a pleasure to welcome you here</p>
       </div>
 
-      <div className={styles.whatido}>
+      <div className={styles.whatido} id={"whatido"}>
         <h1>What i do</h1>
 
         <ul className={styles.services}>
@@ -128,7 +132,7 @@ export default function Home() {
 
       </div>
 
-      <div className={styles.works}>
+      <div className={styles.works} id={"works"}>
         <h1>My works and projects</h1>
 
         <ul className={styles.listWorks}>
@@ -151,7 +155,7 @@ export default function Home() {
 
       </div>
 
-      <div className={styles.aboutme}>
+      <div className={styles.aboutme} id={"aboutme"}>
         <h1>About me</h1>
         <div className={styles.content}>
           <p>Curious about how things worked, I graduated in Information Systems in <a href={"https://www.unidesc.edu.br/"} target={"_blank"}>Midwest Development University.</a><br /><br />
@@ -170,7 +174,7 @@ export default function Home() {
 
       </div>
 
-      <div className={styles.technologies}>
+      <div className={styles.technologies} id={"techs"}>
         <h1>Technologies</h1>
         <p>some of the main languages, frameworks and databases I work with.</p>
 
@@ -188,7 +192,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.getintouch}>
+      <div className={styles.getintouch} id={"getintouch"}>
         <h1>Get in touch</h1>
         <p>and let's work together!</p>
 
