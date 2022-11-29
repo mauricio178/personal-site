@@ -27,7 +27,7 @@ export const ControlsContext = createContext(({} as ControlsContextData));
 
 function ControlsProvider({ children }: ControlsProviderProps) {
 
-    const [modal, setModal] = useState<boolean>(true)
+    const [modal, setModal] = useState<boolean>(false)
 
     const [dataModal, setDataModal] = useState<BannerWorkProps>({} as BannerWorkProps)
 
