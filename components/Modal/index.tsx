@@ -32,7 +32,7 @@ export function Modal() {
                         </div>
                         <div className={styles.info}>
                             <span>Link Repository</span>
-                            {dataModal.repo === 'private' ? <p>Private</p> : <a href={dataModal.repo}>Link here</a>}
+                            {dataModal.repo === 'private' ? <p className={styles.unavailable}>Private</p> : <a href={dataModal.repo}>Link here</a>}
                         </div>
                     </div>
                     <div className={styles.col}>
@@ -42,13 +42,13 @@ export function Modal() {
                         </div>
                         <div className={styles.info}>
                             <span>Link site</span>
-                            {dataModal.site === 'unavailable' ? <p>Unavailable</p> : <a href={dataModal.site} target='_blank'>Link here</a>}
+                            {dataModal.site === 'Unavailable' ? <p className={styles.unavailable}>Unavailable</p> : <a href={dataModal.site} target='_blank'>Link here</a>}
                         </div>
                     </div>
                     <div className={styles.col}>
                         <div className={styles.info}>
                             <span>Demo Aplication</span>
-                            <a href={dataModal.video} target='_blank'>Link here</a>
+                            {dataModal.video === 'Unavailable' ? <p className={styles.unavailable}>Unavailable</p> : <a href={dataModal.video} target='_blank'>Link here</a>}
                         </div>
 
                         {dataModal.documentation ?
