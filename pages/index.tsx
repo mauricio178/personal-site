@@ -5,6 +5,7 @@ import { BannerWork } from '../components/BannerWork'
 import { Button } from '../components/Button'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
+import { Modal } from '../components/Modal'
 import { ServiceCard } from '../components/ServiceCard'
 import styles from '../styles/Home.module.scss'
 
@@ -41,21 +42,46 @@ export default function Home() {
   const works = [
     {
       banner: '/work1.png',
-      name: "Moovre Project"
+      name: "Moovre Project",
+      repo: 'private',
+      site: 'https://moovre-panel-corporate.netlify.app/home',
+      techs: 'React, Next.js, Type Script, HTML5, SCSS',
+      video: 'Unavailable',
+      text: 'Este projeto foi desenvolvido com o intuito de atender as pessoas de forma simples para se locomoverem de forma mais fácil para lugares distantes pagando menos. O Negócio consiste em dois lados, o fornecedor de serviços e o consumidor, esta parte do projeto está voltado ao prestador de serviços. Em desenvolvimento utilizei muitos recursos do React e Nextjs para aprimorar o carregamento e funcionamento de algumas partes como Funcionários e Perfil principal. O Projeto ainda irá contar com integrações futuras com o back-end, novas páginas e funcionalidades.',
+      period: 'jun/22 - In Progress'
     },
     {
       banner: '/gpmanager.png',
-      name: "GP Manager"
+      name: "GP Manager",
+      repo: 'private',
+      site: 'https://www.researchgate.net/publication/354922163_Desenvolvimento_de_um_Sistema_Web_para_Gerenciamento_de_Projetos_TI_Baseado_no_PMBOK',
+      techs: 'React, Next.js, Type Script, HTML5, SCSS, Node.js, Heroku',
+      video: 'Unavailable',
+      text: 'Com a necessidade de um sistema integrado para gerenciamento de Projetos voltados para a área de tecnologia, surgiu uma idéia de construir um baseado nas premissas do PMBOK. Este foi meu Trabalho de Conclusão de Curso, onde uma pesquisa científica foi realizada na área para descobrir os gaps e falhas em sistemas de gerenciamento. Pela complexidade de um sistema que atenda tantas necessidades foi realizado através da metodologia SCRUM. Com a estrutura pronta, realizei o desenvolvimento com React no Front-end, Noje.js no Back-end e MongoDB como Data-base. Este trabalho foi postado em um dos maiores sites de pesquisas científicas do mundo, atualmente o projeto segue em evolução.',
+      documentation: 'https://www.researchgate.net/publication/354922163_Desenvolvimento_de_um_Sistema_Web_para_Gerenciamento_de_Projetos_TI_Baseado_no_PMBOK',
+      period: 'jun/20 - In Progress'
     },
-    // {
-    //   banner: '/player-community.png',
-    //   name: "Another Project"
-    // },
     {
       banner: '/ig.news.png',
-      name: "IG News"
+      name: "IG News",
+      repo: 'https://github.com/mauricio178/ignews',
+      site: 'Unavailable',
+      techs: 'React.js, Next.js, HTML5, SCSS, FaunaDB',
+      video: 'https://www.linkedin.com/feed/update/urn:li:activity:6832059513273692160/',
+      text: 'Com o intuito de exercitar o conhecimento em SSR e SSGcom Next.js, realizei este projeto em bootcamp onde trabalham processos de "OAuth" Github, Pagamentos com Stripe, Controle de assinaturas, Server Side Rending, Server Side Generation.',
+      period: 'jun/21 - ago/21'
     },
-  ]
+    {
+      banner: '/player-community.png',
+      name: "Player Community",
+      repo: 'https://github.com/mauricio178/ignews',
+      site: 'Unavailable',
+      techs: 'React Native, Type Script, HTML5, SCSS',
+      video: 'https://www.linkedin.com/feed/update/urn:li:activity:6829266472934662144/',
+      text: 'Este projeto funciona para agendamento de partidas com Players através de uma conexão com a API do Discord, logando com seu perfil, ele busca todos os servidores e as pessoas dentro deles, permitindo organizar jogatinas com seus amigos. Aqui foi utilizado React Native com conceitos de UX-UI. ',
+      period: 'ago/21 - nov/21'
+    },
+  ] 
 
   const technologies = [
     {
@@ -142,6 +168,13 @@ export default function Home() {
                 <BannerWork
                   banner={work.banner}
                   name={work.name}
+                  period={work.period}
+                  repo={work.repo}
+                  site={work.site}
+                  techs={work.techs}
+                  text={work.text}
+                  video={work.video}
+                  documentation={work.documentation}
                   key={k}
                 />
               )
@@ -149,9 +182,12 @@ export default function Home() {
           }
         </ul>
 
-        <div className={styles.seeMore}>
+        <Modal/>
+
+
+        {/* <div className={styles.seeMore}>
           <Button label='See more' theme={'white'} />
-        </div>
+        </div> */}
 
       </div>
 

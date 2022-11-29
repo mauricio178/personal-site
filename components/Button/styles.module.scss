@@ -1,7 +1,9 @@
 .white,
 .white_fill,
 .black,
-.black_fill, .green {
+.black_fill, 
+.green,
+.red {
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -9,6 +11,7 @@
     width: 100%;
     border-radius: 10px;
     padding: 0 .5rem;
+    border: none;
 
     &:hover {
         transition: .3s;
@@ -27,6 +30,7 @@
 .white {
     border: 1px solid white;
 
+    z-index: 99999999999;
     p {
         color: var(--white);
     }
@@ -72,6 +76,27 @@
 
         p {
             color: var(--green);
+        }
+    }
+}
+
+.red{
+    background: var(--red);
+    border: 1px solid transparent;
+
+    p {
+        color: var(--white);
+        font-weight: bold;
+    }
+
+    &:hover {
+        transition: .4s;
+        cursor: pointer;
+        background: transparent;
+        border: 1px solid var(--red);
+
+        p {
+            color: var(--white);
         }
     }
 }

@@ -95,12 +95,6 @@
         background: rgb(96, 96, 96);
     }
 
-    &:hover {
-        >h1 {
-            transition: .3s;
-            letter-spacing: 6px;
-        }
-    }
 }
 
 .works {
@@ -134,13 +128,6 @@
         padding-top: 2rem;
         padding-bottom: 2rem;
         display: none;
-    }
-
-    &:hover {
-        >h1 {
-            transition: .3s;
-            letter-spacing: 6px;
-        }
     }
 
 }
@@ -275,10 +262,6 @@
         flex-wrap: wrap;
         width: 80%;
 
-        >a:last-child{
-            margin-bottom: 0rem;
-        }
-
         .icon {
             background-color: var(--gray-500);
             padding: .5rem;
@@ -366,13 +349,6 @@
         width: 80%;
         padding-top: 1rem;
     }
-
-    &:hover {
-        h1 {
-            transition: .3s;
-            letter-spacing: 6px;
-        }
-    }
 }
 
 @media (max-width: 800px) {
@@ -385,6 +361,7 @@
             font-size: 2rem;
             width: 100%;
             align-items: flex-start;
+            margin-bottom: 2rem;
         }
 
         h3 {
@@ -392,6 +369,7 @@
             font-weight: 100;
             line-height: 1.8;
             letter-spacing: 2px;
+            margin-top: 2rem;
 
             >span {
                 font-weight: bold;
@@ -435,15 +413,15 @@
             height: auto;
 
             li:first-child {
-                margin-top: 15%
+                margin-top: -15%
             }
 
             li {
-                margin-bottom: 55%
+                margin-bottom: 20%
             }
 
             li:last-child {
-                margin-bottom: 0%;
+                margin-bottom: -15%;
             }
         }
     }
@@ -503,6 +481,11 @@
 
         .listTechnologies {
             width: 80%;
+            margin-top: 1rem;
+
+            // >a:last-child{
+            //     margin-bottom: 0rem;
+            // }
         }
     }
 

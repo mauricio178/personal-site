@@ -1,71 +1,84 @@
 .container {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-right: 1rem;
+    width: 220px;
+    list-style: none;
+    height: 110px;
 
     img {
-        object-fit: contain;
+        object-fit: cover;
         position: absolute;
-        height: inherit;
         border-radius: 10px;
-        // max-width: 100%;
+        width: inherit;
+        height: inherit;
     }
 
     p {
-        opacity: 0;
         position: absolute;
+        width: 100%;
         display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center ;
-        top: 0px;
-        width: 200px;
+        justify-content: center;
+        top: 50%;
+        opacity: 0;
+        font-size: 1.4rem;
+        font-weight: bold;
     }
 
     svg {
         opacity: 0;
-        position: absolute;
         display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center ;
-        bottom: 10px;
-        color: var(--white);
+        left: 43%;
+        top: 30%;
+        font-size: 2rem;
+        position: absolute
     }
 
     &:hover {
+        transition: .4s;
         cursor: pointer;
+
+        img {
+            transition: .4s;
+            filter: brightness(50%);
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -o-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+        }
 
         p {
             transition: .4s;
-            background-color: var(--gray-500);
-            padding: .4rem;
-            border-radius: 10px;
             opacity: 1;
+            top: 90%;
         }
+
         svg {
             transition: .4s;
-            border-radius: 10px;
             opacity: 1;
-
             &:hover{
+                transition: .4s;
                 color: var(--blue-100);
             }
         }
     }
+
+
 }
 
 @media (max-width: 800px) {
-    
-    .container {
-        margin-bottom: 2rem;
 
-        img{
-            width: 100%;
+    .container {
+        width: 100%;
+
+        img {
             height: auto;
+        }
+
+
+        &:hover {
+            transition: .3s;
+            width: 100%;
+            height: 110px;
         }
 
     }
