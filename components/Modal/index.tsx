@@ -21,7 +21,7 @@ export function Modal() {
             <div className={styles.content} style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${dataModal.banner})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'top' }}>
                 <div className={styles.top}>
                     <h2>{dataModal.name}</h2>
-                    <Button label={'Close'} theme={'red'} onClick={() => closeModal()} />
+                    <Button label={'X'} theme={'red'} onClick={() => closeModal()} />
                 </div>
                 <p className={styles.text}>{dataModal.text}</p>
                 <div className={styles.infos}>

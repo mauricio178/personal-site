@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    background-color: var(--black);
+    background-color: var(--primary);
 
 
     .content {
@@ -16,11 +16,16 @@
         display: flex;
 
         .contacts {
-            width: 50%;
+            width: 100%;
             display: flex;
             align-items: center;
             flex-direction: column;
             justify-content: space-between;
+
+            h1{
+                font-size: 3rem;
+                width: 100%;
+            }
 
             .list {
                 display: flex;
@@ -39,7 +44,7 @@
                 .whatsapp {
                     display: flex;
                     align-items: center;
-                    justify-content: space-between;
+                    justify-content: flex-start;
                     margin-bottom: 2rem;
                     border: 1px solid transparent;
 
@@ -54,13 +59,15 @@
                         width: 80%;
                         display: flex;
                         justify-content: center;
+                        font-weight: bold;
+                        border: 1px solid transparent;
 
                         &:hover {
                             transition: .3s;
                             cursor: pointer;
                             background-color: var(--white);
                             color: var(--green);
-                            font-weight: bold;
+                            border: 1px solid var(--green);
                         }
                     }
                 }
@@ -68,7 +75,7 @@
                 .linkedin {
                     display: flex;
                     align-items: center;
-                    justify-content: space-between;
+                    justify-content: flex-start;
                     margin-bottom: 2rem;
                     border: 1px solid transparent;
 
@@ -83,13 +90,15 @@
                         width: 80%;
                         display: flex;
                         justify-content: center;
+                        font-weight: bold;
+                        border: 1px solid transparent;
 
                         &:hover {
                             transition: .3s;
                             cursor: pointer;
                             background-color: var(--white);
                             color: var(--blue-100);
-                            font-weight: bold;
+                            border: 1px solid var(--blue-100);
                         }
                     }
                 }
@@ -97,7 +106,7 @@
                 .github {
                     display: flex;
                     align-items: center;
-                    justify-content: space-between;
+                    justify-content: flex-start;
                     margin-bottom: 2rem;
                     border: 1px solid transparent;
 
@@ -112,45 +121,61 @@
                         width: 80%;
                         display: flex;
                         justify-content: center;
+                        font-weight: bold;
+                        border: 1px solid transparent;
 
                         &:hover {
                             transition: .3s;
                             cursor: pointer;
                             background-color: var(--white);
                             color: var(--black);
+                            border: 1px solid var(--black);
                         }
                     }
                 }
 
-                .email {
+                .mail {
                     display: flex;
                     align-items: center;
                     justify-content: flex-start;
                     margin-bottom: 2rem;
                     border: 1px solid transparent;
 
-                    svg {
+                    img {
                         font-size: 2rem;
                         margin-right: 1rem;
                     }
 
                     a {
-                        background-color: black;
+                        background-color: var(--white);
                         border-radius: 5px;
                         width: 80%;
+                        padding: .4rem;
                         display: flex;
+                        color: var(--black);
+                        font-weight: bold;
                         justify-content: center;
+                        border: 1px solid transparent;
+
+                        &:hover {
+                            transition: .3s;
+                            cursor: pointer;
+                            background-color: var(--primary);
+                            color: var(--white);
+                            border: 1px solid var(--white);
+                        }
                     }
                 }
 
 
             }
 
-            h2 {
+            p {
                 width: 100%;
                 align-items: flex-start;
                 padding-bottom: 1rem;
-                letter-spacing: 5px;
+                letter-spacing: 3px;
+                font-size: 1.5rem;
             }
 
         }
@@ -193,7 +218,7 @@
                 width: 100%;
                 align-items: flex-start;
                 padding-bottom: 1rem;
-                letter-spacing: 5px;
+                letter-spacing: 3px;
             }
         }
     }
@@ -204,7 +229,7 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
-        background-color: var(--primary);
+        background-color: var(--black);
         flex-direction: row;
 
         .made {
@@ -232,7 +257,7 @@
             flex-direction: column;
             align-items: center;
             display: flex;
-            background-color: var(--black);
+            background-color: var(--primary);
 
             .contacts {
                 width: 80%;
@@ -241,9 +266,17 @@
                 flex-direction: column;
                 justify-content: space-between;
 
+                >h1 {
+                    font-size: 2rem;
+                }
+
+                >h2{
+                    font-size: 1.2rem;
+                }
+
                 .list {
                     display: flex;
-                    flex-direction: row;
+                    flex-direction: column;
                 }
 
                 .col {
@@ -281,7 +314,7 @@
             display: flex;
             align-items: center;
             justify-content: space-around;
-            background-color: var(--primary);
+            background-color: var(--black);
             flex-direction: column;
 
             .made {

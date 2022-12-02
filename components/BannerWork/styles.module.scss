@@ -6,9 +6,11 @@
 
     img {
         object-fit: cover;
+        box-shadow: 0px 0px 15px var(--gray-200);
         position: absolute;
         border-radius: 10px;
         width: inherit;
+        border: 2px solid var(--gray-100);
         height: inherit;
     }
 
@@ -44,6 +46,7 @@
             -o-transform: scale(1.1);
             -ms-transform: scale(1.1);
             transform: scale(1.1);
+            box-shadow: 0px 0px 5px var(--gray-300);
         }
 
         p {
@@ -55,7 +58,8 @@
         svg {
             transition: .4s;
             opacity: 1;
-            &:hover{
+
+            &:hover {
                 transition: .4s;
                 color: var(--blue-100);
             }

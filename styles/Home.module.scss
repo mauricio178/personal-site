@@ -103,7 +103,7 @@
     flex-direction: column;
     justify-content: center;
     background-color: var(--gray-900);
-    padding: 4rem 0;
+    padding: 1rem 0;
     width: 100%;
 
     h1 {
@@ -111,7 +111,7 @@
         width: 80%;
         justify-content: flex-start;
         font-size: 3rem;
-        padding-bottom: 2rem;
+        padding: 2rem 0;
         letter-spacing: 5px;
     }
 
@@ -121,7 +121,7 @@
         flex-direction: row;
         justify-content: space-between;
         width: 80%;
-        padding: 4rem 0;
+        padding: 2rem 0;
     }
 
     .seeMore {
@@ -147,6 +147,7 @@
         align-items: flex-start;
         width: 80%;
         letter-spacing: 5px;
+        margin: 2rem 0;
     }
 
     .content {
@@ -249,6 +250,7 @@
 
     >p {
         width: 80%;
+        font-size: 1.5rem;
         padding-bottom: 2rem;
     }
 
@@ -258,7 +260,6 @@
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        padding-bottom: 2rem;
         flex-wrap: wrap;
         width: 80%;
 
@@ -347,7 +348,13 @@
 
     .buttonSend {
         width: 80%;
+        display: flex;
+        justify-content: flex-start;
         padding-top: 1rem;
+
+        >button{
+            width: 220px;
+        }
     }
 }
 

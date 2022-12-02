@@ -3,6 +3,7 @@
 html,
 button,
 a,
+input,
 h1, h1,h3,
 body {
   padding: 0;
@@ -14,6 +15,7 @@ body {
   --white: #ffffff;
 
   --gray-100: #bbbaba;
+  --gray-200: #a9a9a9;
   --gray-300: #6d6d6d;
   --gray-500: #434343;
   --gray-800: #2c2c2c;

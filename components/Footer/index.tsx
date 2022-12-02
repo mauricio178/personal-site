@@ -70,29 +70,37 @@ export function Footer() {
     }
 
     return (
-        <div className={styles.container}>
+        <div className={styles.container} id={"getintouch"}>
             <div className={styles.content}>
                 <div className={styles.contacts}>
-                    <h2>Contacts</h2>
+                    <h1>Get in touch</h1>
+                    <p>and lets work together</p>
                     <div className={styles.list}>
                         <div className={styles.col}>
                             <div className={styles.whatsapp}>
-                                <Image src={'/wpp-icon.png'} alt={'whatsapp icon'} width={'30'} height={'30'} />
+                                <Image src={'/wpp-icon.png'} alt={'whatsapp'} width={'30'} height={'30'} />
                                 <a href={'https://wa.me/5561982243585?text=Olá,%20Mauricio!'} target="_blank">Start a conversation</a>
                             </div>
                             <div className={styles.linkedin}>
-                                <Image src={'/linkedin.png'} alt={'whatssapp icon'} width={'30'} height={'30'} />
+                                <Image src={'/linkedin.png'} alt={'linkedin'} width={'30'} height={'30'} />
                                 <a href={'https://www.linkedin.com/in/mauricio-rodrigues-659352186/'} target="_blank">Visit profile</a>
                             </div>
+
+                        </div>
+                        <div className={styles.col}>
                             <div className={styles.github}>
-                                <Image src={'/github.png'} alt={'whatsapp icon'} width={'30'} height={'30'} />
+                                <Image src={'/github.png'} alt={'github'} width={'30'} height={'30'} />
                                 <a href={'https://github.com/mauricio178'} target="_blank">Visit profile</a>
+                            </div>
+                            <div className={styles.mail}>
+                                <Image src={'/mail.png'} alt={'mail'} width={'30'} height={'30'} />
+                                <a  href="mailto:mauriciodev178@gmail.com?subject=Write something." target="_blank">Send a mail</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className={styles.sitemap}>
+                {/* <div className={styles.sitemap}>
                     <h2>Sitemap</h2>
                     <div className={styles.list}>
                         <div className={styles.col}>
@@ -107,7 +115,7 @@ export function Footer() {
                         </div>
                     </div>
 
-                </div>
+                </div> */}
             </div>
 
             <div className={styles.bottom}>
