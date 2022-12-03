@@ -132,17 +132,12 @@ export default function Home() {
 
         <Modal/>
 
-
-        {/* <div className={styles.seeMore}>
-          <Button label='See more' theme={'white'} />
-        </div> */}
-
       </div>
 
       <div className={styles.aboutme} id={"aboutme"}>
         <h1>About me</h1>
         <div className={styles.content}>
-          <p>Curious about how things worked, I graduated in Information Systems in <a href={"https://www.unidesc.edu.br/"} target={"_blank"}>Midwest Development University.</a><br /><br />
+          <p>Curious about how things worked, I graduated in Information Systems in <a href={"https://www.unidesc.edu.br/"} target={"_blank"}>UNIDESC - Development University.</a><br /><br />
             I have been working in the development area since 2020, where I chose to improve my knowledge and invest my time.<br /><br />
             On my journey, I learned to deal with projects in different stages from planning, development to maintenance.<br /><br />
             Today I transform concepts and learning into results where I work.
