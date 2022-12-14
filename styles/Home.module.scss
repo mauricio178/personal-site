@@ -1,44 +1,52 @@
+.container {
+    background-color: white;
+}
+
 .hello {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9),
-            rgba(0, 0, 0, 0.7)), url('/bg.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            var(--primary)), url('/bg.jpg');
     background-size: cover;
     background-position: center;
     height: 95vh;
-    padding: 2rem 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 
-    h1 {
-        font-size: 3.2rem;
-        color: var(--white);
-        letter-spacing: 4px;
-        margin-bottom: 2rem;
-    }
 
-    h3 {
-        font-size: 2.5rem;
-        font-weight: 100;
-        line-height: 1.4;
-        letter-spacing: 2px;
-        color: var(--white);
+    >div {
+        width: 80%;
 
-        >span {
-            font-weight: bold;
+        h1 {
+            font-size: 3.2rem;
+            color: var(--white);
+            letter-spacing: 4px;
+            margin-bottom: 2rem;
         }
 
-        &:hover {
-            transition: .3s;
-            letter-spacing: 3px;
-        }
-    }
+        h3 {
+            font-size: 2.5rem;
+            font-weight: 100;
+            line-height: 1.4;
+            letter-spacing: 2px;
+            color: var(--white);
 
-    p {
-        font-size: 1.8rem;
-        font-weight: 100;
-        padding-top: 2rem;
-        color: var(--white);
+            >span {
+                font-weight: bold;
+            }
+
+            &:hover {
+                transition: .3s;
+                letter-spacing: 3px;
+            }
+        }
+
+        p {
+            font-size: 1.8rem;
+            font-weight: 100;
+            padding-top: 2rem;
+            color: var(--white);
+        }
     }
 }
 
@@ -46,53 +54,66 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: var(--primary);
+    // background-color: var(--primary);
+    background-image: linear-gradient(var(--primary), var(--gray-900));
     justify-content: flex-start;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
 
-    >h1 {
-        font-size: 3rem;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding-left: 2rem;
-        padding-bottom: 2rem;
-        padding-top: 2rem;
-        letter-spacing: 5px;
-    }
+    // border-bottom-left-radius: 50% 10%;
+    //         border-bottom-right-radius: 50% 10%;
+    // border-top-left-radius: 50% 10%;
+    //         border-top-right-radius: 50% 10%;
 
-    .services {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
+    >div {
         width: 80%;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        height: 80%;
-        margin: 0 0;
-        padding: 0 0;
 
+        >h1 {
+            font-size: 3rem;
+            display: flex;
+            width: 80%;
+            justify-content: flex-start;
+            padding-top: 2rem;
+            padding-bottom: 1rem;
+            letter-spacing: 5px;
+        }
 
-    }
+        >h2 {
+            width: 80%;
+            display: flex;
+            font-size: 1.2rem;
+            font-weight: 200;
+            margin-bottom: 2rem;
+            justify-content: flex-start;
+        }
 
-    /* width */
-    ::-webkit-scrollbar {
-        width: 10px;
-    }
+        .services {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 0;
+            padding: 0 0;
+        }
 
-    /* Track */
-    ::-webkit-scrollbar-track {
-        background: transparent;
-    }
+        // /* width */
+        // ::-webkit-scrollbar {
+        //     width: 10px;
+        // }
 
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-        background: rgb(15, 15, 15);
-    }
+        // /* Track */
+        // ::-webkit-scrollbar-track {
+        //     background: transparent;
+        // }
 
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-        background: rgb(96, 96, 96);
+        // /* Handle */
+        // ::-webkit-scrollbar-thumb {
+        //     background: rgb(15, 15, 15);
+        // }
+
+        // /* Handle on hover */
+        // ::-webkit-scrollbar-thumb:hover {
+        //     background: rgb(96, 96, 96);
+        // }
     }
 
 }
@@ -102,7 +123,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background-color: var(--gray-900);
+    background-image: linear-gradient(var(--gray-900), var(--white));
     padding: 2rem 0;
     padding-bottom: 3rem;
     width: 100%;
@@ -134,7 +155,7 @@
 }
 
 .aboutme {
-    background-color: var(--white);
+    background-image: linear-gradient(var(--white), var(--gray-500));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -232,7 +253,8 @@
 }
 
 .technologies {
-    background-color: var(--gray-500);
+    background-image: linear-gradient(var(--gray-500), var(--primary));
+
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -265,7 +287,6 @@
         width: 80%;
 
         .icon {
-            background-color: var(--gray-500);
             padding: .5rem;
             display: flex;
             justify-content: center;
@@ -277,9 +298,9 @@
             &:hover {
                 transition: .3s;
                 cursor: pointer;
-                background-color: var(--gray-800);
 
                 >p {
+                    transition: .3s;
                     opacity: 1;
                     text-align: center;
                 }
@@ -353,7 +374,7 @@
         justify-content: flex-start;
         padding-top: 1rem;
 
-        >button{
+        >button {
             width: 220px;
         }
     }
@@ -361,51 +382,57 @@
 
 @media (max-width: 800px) {
     .hello {
-        padding: 0 2rem;
         display: flex;
-        align-items: flex-start;
+        align-items: center;
+        width: 100%;
 
-        h1 {
-            font-size: 2rem;
-            width: 100%;
-            align-items: flex-start;
-            margin-bottom: 2rem;
-        }
+        >div {
+            width: 80%;
 
-        h3 {
-            font-size: 1.2rem;
-            font-weight: 100;
-            line-height: 1.8;
-            letter-spacing: 2px;
-            margin-top: 2rem;
-
-            >span {
-                font-weight: bold;
+            h1 {
+                font-size: 2rem;
+                width: 100%;
+                align-items: flex-start;
+                margin-bottom: 2rem;
             }
-        }
 
-        p {
-            font-size: 1rem;
-            font-weight: 100;
+            h3 {
+                font-size: 1.2rem;
+                font-weight: 100;
+                line-height: 1.8;
+                letter-spacing: 2px;
+                margin-top: 2rem;
 
+                >span {
+                    font-weight: bold;
+                }
+            }
+
+            p {
+                font-size: 1rem;
+                font-weight: 100;
+
+            }
         }
     }
 
     .whatido {
 
+        >div {
 
-        >h1 {
-            font-size: 2rem;
-            width: 100%;
-            display: flex;
-            justify-content: flex-start;
-            padding-left: 2rem;
-            padding-bottom: 1rem;
+
+            >h1 {
+                font-size: 2rem;
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                padding-bottom: 1rem;
+            }
         }
     }
 
     .works {
-        
+
         h1 {
             display: flex;
             width: 80%;
@@ -500,7 +527,7 @@
     .getintouch {
         width: 100%;
 
-        >h1{
+        >h1 {
             padding-top: 1rem;
             font-size: 2rem;
         }
@@ -510,7 +537,7 @@
             flex-direction: column;
             width: 80%;
 
-            >div{
+            >div {
                 width: 100%;
             }
         }

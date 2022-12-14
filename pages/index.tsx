@@ -9,7 +9,7 @@ import { Header } from '../components/Header'
 import { Input } from '../components/Input'
 import { Modal } from '../components/Modal'
 import { ServiceCard } from '../components/ServiceCard'
-import { useControls } from '../hooks/constrols'
+import { useControls } from '../hooks/controls'
 import styles from '../styles/Home.module.scss'
 
 export default function Home() {
@@ -22,8 +22,8 @@ export default function Home() {
   const [textError, setTextError] = useState<boolean>(false)
 
   const {
-    services, 
-    works, 
+    services,
+    works,
     technologies,
     sendEmail
   } = useControls()
@@ -33,29 +33,29 @@ export default function Home() {
     return re.test(email);
   }
 
-  function sendFormEmail(){
-    if(name === ''){
+  function sendFormEmail() {
+    if (name === '') {
       setNameError(true)
       toast.error('Enter your name.')
       return
-    } 
-    if(email === ''){
+    }
+    if (email === '') {
       setEmailError(true)
       toast.error('Enter your best E-mail.')
       return
-    } 
-    if(text === ''){
+    }
+    if (text === '') {
       setTextError(true)
       toast.error('Type a message.')
       return
     }
-    if(!validateEmail(email)){
+    if (!validateEmail(email)) {
       setEmailError(true)
       toast.error('E-mail formato incorreto.')
       return
     }
 
-    if(name !== '' && email !== '' && text !== '' && validateEmail(email)){
+    if (name !== '' && email !== '' && text !== '' && validateEmail(email)) {
       const obj = {
         name: name,
         email: email,
@@ -81,28 +81,36 @@ export default function Home() {
       <Header />
 
       <div className={styles.hello} id={"top"}>
-        <h1 className={styles.title}>Hi there!</h1>
-        <h3 className={styles.label}>I'm <span>Mauricio Rodrigues</span> and i am <br /> <span>Front-end Engineer.</span></h3>
-        <p className={styles.legend}>it's a pleasure to welcome you here</p>
+        <div>
+          <h1 className={styles.title}>Hi there!</h1>
+          <h3 className={styles.label}>I'm <span>Mauricio Rodrigues</span> and i'm a<br /> <span>Front-end Engineer.</span></h3>
+          <p className={styles.legend}>it's a pleasure to welcome you here</p>
+        </div>
       </div>
 
       <div className={styles.whatido} id={"whatido"}>
-        <h1>What i do</h1>
 
-        <ul className={styles.services}>
-          {
-            services.map((service: any, k: number) => {
-              return (
-                <ServiceCard
-                  key={k}
-                  icon={service.icon}
-                  title={service.title}
-                  text={service.text}
-                />
-              )
-            })
-          }
-        </ul>
+        <div>
+          <h1>What i do</h1>
+
+          <h2>Some services that I provide and concepts I follow.</h2>
+
+          <ul className={styles.services}>
+            {
+              services.map((service: any, k: number) => {
+                return (
+                  <ServiceCard
+                    key={k}
+                    icon={service.icon}
+                    title={service.title}
+                    text={service.text}
+                  />
+                )
+              })
+            }
+          </ul>
+
+        </div>
 
       </div>
 
@@ -130,7 +138,7 @@ export default function Home() {
           }
         </ul>
 
-        <Modal/>
+        <Modal />
 
       </div>
 
@@ -143,7 +151,7 @@ export default function Home() {
             Today I transform concepts and learning into results where I work.
           </p>
 
-          <Image src={'/working.gif'} alt={'working-gif'} width={'504'} height={'336'} />
+          <Image src={'/about-me.png'} alt={'working-gif'} width={'504'} height={'336'} />
         </div>
         <div className={styles.seeResume}>
           <a href={"https://www.linkedin.com/in/mauricio-rodrigues-659352186/"} target={"_blank"} >

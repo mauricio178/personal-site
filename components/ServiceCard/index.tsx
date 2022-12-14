@@ -13,9 +13,12 @@ export function ServiceCard(data: ServiceProps) {
 
     return (
         <div className={styles.container}>
-            <Image src={data.icon} width={'70'} height={'70'} alt={data.title}/>
-            <h3>{data.title}</h3>
-            <p>{data.text}</p>
+            <Image src={data.icon} width={'70'} height={'70'} alt={data.title} />
+            <div>
+                <h3>{data.title}</h3>
+                <p>{data.text}</p>
+            </div>
+
         </div>
     );
 }

@@ -14,18 +14,19 @@ export function Header() {
             top: (elCoordenadas.y - 20),
             behavior: 'smooth'
         })
-        
+
     }
 
-    
+
 
     return (
         <div className={styles.container}>
-
-            <Image src={'/favicon.ico'} alt={'logo'} width={'50'} height={'50'} />
-
             <div>
-                <Button label={'Get in touch'} theme={'white'} onClick={() => goToGetInTouch()}/>
+                <Image src={'/favicon.ico'} alt={'logo'} width={'50'} height={'50'} />
+
+                <div>
+                    <Button label={'Get in touch'} theme={'white'} onClick={() => goToGetInTouch()} />
+                </div>
             </div>
 
         </div>

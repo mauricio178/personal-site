@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './styles.module.scss'
 import Image from 'next/image'
 import {BsFillInfoCircleFill} from 'react-icons/bs'
-import { useControls } from '../../hooks/constrols'
+import { useControls } from '../../hooks/controls'
 import { Modal } from '../Modal'
 
 export type BannerWorkProps = {

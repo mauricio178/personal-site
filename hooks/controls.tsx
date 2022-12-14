@@ -70,6 +70,11 @@ function ControlsProvider({ children }: ControlsProviderProps) {
             text: 'Interested in updating, remodeling or fixing a bug on your site? Contact me and we will see the best to be done!'
         },
         {
+            icon: '/fluxo-de-trabalho.png',
+            title: 'Project Life Cicle',
+            text: 'The project life cycle is related to the phases it goes through, from Initiation, Planning, Implementation and Delivery.'
+        },
+        {
             icon: '/api.png',
             title: 'API Integration',
             text: 'Integrating an API into your website makes it more efficient, independent and informative.'

@@ -53,6 +53,8 @@
             transition: .4s;
             opacity: 1;
             top: 90%;
+            font-weight: bold;
+            color: var(--primary);
         }
 
         svg {
@@ -73,6 +75,7 @@
 
     .container {
         width: 100%;
+        margin-bottom: 2rem;
 
         img {
             height: auto;
