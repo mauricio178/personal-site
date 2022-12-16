@@ -144,12 +144,24 @@ function ControlsProvider({ children }: ControlsProviderProps) {
             name: 'React'
         },
         {
+            icon: '/react-native.png',
+            name: 'React Native'
+        },
+        {
             icon: '/html-5.png',
             name: 'HTML5'
         },
         {
             icon: '/css-3.png',
             name: 'CSS3'
+        },
+        {
+            icon: '/styled-components.png',
+            name: 'Styled Components'
+        },
+        {
+            icon: '/sass.png',
+            name: 'Sass'
         },
         {
             icon: '/nextjs.png',

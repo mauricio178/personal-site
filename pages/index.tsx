@@ -117,6 +117,8 @@ export default function Home() {
       <div className={styles.works} id={"works"}>
         <h1>My works and projects</h1>
 
+        <h3>Check out some of my work and personal projects</h3>
+
         <ul className={styles.listWorks}>
           {
             works.map((work: any, k: number) => {
@@ -151,7 +153,7 @@ export default function Home() {
             Today I transform concepts and learning into results where I work.
           </p>
 
-          <Image src={'/about-me.png'} alt={'working-gif'} width={'504'} height={'336'} />
+          <Image src={'/about-me.png'} alt={'working-gif'} width={'460'} height={'265'} />
         </div>
         <div className={styles.seeResume}>
           <a href={"https://www.linkedin.com/in/mauricio-rodrigues-659352186/"} target={"_blank"} >
