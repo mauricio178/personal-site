@@ -70,6 +70,11 @@ function ControlsProvider({ children }: ControlsProviderProps) {
             text: 'Interested in updating, remodeling or fixing a bug on your site? Contact me and we will see the best to be done!'
         },
         {
+            icon: '/ecommerce.png',
+            title: 'E-commerce Support',
+            text: 'If you have or want to create an E-commerce, I propose great solutions to increase SEO, CMS Management, Theme Customization and more.'
+        },
+        {
             icon: '/fluxo-de-trabalho.png',
             title: 'Project Life Cicle',
             text: 'The project life cycle is related to the phases it goes through, from Initiation, Planning, Implementation and Delivery.'
@@ -171,6 +176,14 @@ function ControlsProvider({ children }: ControlsProviderProps) {
             icon: '/nodejs.png',
             name: 'Node.js'
         },
+        // {
+        //     icon: '/vtex.png',
+        //     name: 'VTEX'
+        // },
+        // {
+        //     icon: '/shopify.png',
+        //     name: 'Shopify'
+        // },
         {
             icon: '/mongodb.webp',
             name: 'MongoDB'
