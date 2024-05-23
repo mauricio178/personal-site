@@ -1,11 +1,18 @@
 import styles from './styles.module.scss'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button } from '../Button';
 import Image from 'next/image';
-
-
+import { LanguageProps, useControls } from '../../hooks/controls';
+import { Input } from '../Input';
+import { SkeletonComponent } from '../SkeletonComponent';
 
 export function Header() {
+
+    const { setCurrentLanguage, currentLanguage } = useControls();
+
+    const [loading, setLoading] = useState(false);
+
+    const [languageSelected, setLanguageSelected] = useState<LanguageProps>({ language: "br" });
 
     function goToGetInTouch() {
         const el = document.getElementById('getintouch');
@@ -14,19 +21,57 @@ export function Header() {
             top: (elCoordenadas.y - 20),
             behavior: 'smooth'
         })
-
     }
 
+    function changeLanguage() {
+        setLanguageSelected({ language: languageSelected.language === "br" ? "us" : "br" })
+    }
 
+    useEffect(() => {
+        setCurrentLanguage(languageSelected);
+    }, [languageSelected])
+
+    useEffect(() => {
+        setLoading(true);
+
+        const timer = setTimeout(() => {
+
+            setLoading(false);
+        }, 2000);
+
+        return () => clearTimeout(timer);
+    }, [currentLanguage]);
 
     return (
         <div className={styles.container}>
             <div>
                 <Image src={'/favicon.ico'} alt={'logo'} width={'50'} height={'50'} />
 
+                <label className={styles.switch}>
+                    <input
+                        defaultValue={languageSelected.language}
+                        type="checkbox"
+                        value={languageSelected.language}
+                        onChange={() => {
+                            changeLanguage()
+                        }}
+                    />
+                    <div className={styles.slider} />
+                    <p className={styles.selectedLanguage}>
+                        {languageSelected.language}
+                    </p>
+                </label>
+
                 <div>
-                    <Button label={'Get in touch'} theme={'white'} onClick={() => goToGetInTouch()} />
+                    <Button
+                        label={currentLanguage.language === "br" ? "Me contate" : "Get in touch"}
+                        theme={'white'}
+                        onClick={() => goToGetInTouch()}
+                    />
+
                 </div>
+
+
             </div>
 
         </div>

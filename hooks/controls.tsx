@@ -34,6 +34,10 @@ export type EmailBodyProps = {
     text: string
 }
 
+export interface LanguageProps {
+    language: "br" | "us" | ""
+}
+
 interface ControlsContextData {
     modal: boolean,
     setModal: Dispatch<SetStateAction<boolean>>,
@@ -43,7 +47,10 @@ interface ControlsContextData {
     works: any,
     technologies: any,
     sendEmail(body: EmailBodyProps): Promise<string>
+    currentLanguage: LanguageProps;
+    setCurrentLanguage: Dispatch<SetStateAction<LanguageProps>>;
 }
+
 
 export const ControlsContext = createContext(({} as ControlsContextData));
 
@@ -52,6 +59,8 @@ function ControlsProvider({ children }: ControlsProviderProps) {
     const [modal, setModal] = useState<boolean>(false)
 
     const [dataModal, setDataModal] = useState<BannerWorkProps>({} as BannerWorkProps)
+
+    const [currentLanguage, setCurrentLanguage] = useState<LanguageProps>({ language: "" } as LanguageProps);
 
     const services = [
         {
@@ -219,7 +228,9 @@ function ControlsProvider({ children }: ControlsProviderProps) {
                     services,
                     works,
                     technologies,
-                    sendEmail
+                    sendEmail,
+                    setCurrentLanguage,
+                    currentLanguage
                 }}
             >
                 {children}

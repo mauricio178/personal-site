@@ -1,0 +1,41 @@
+.container {
+  gap: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 40%;
+
+  .skeleton_small {
+    width: 50%;
+    height: 60px;
+  }
+
+  .skeleton_medium {
+    width: 50%;
+    height: 60px;
+  }
+
+  .skeleton_big {
+    width: 80%;
+    height: 120px;
+  }
+}
+
+.container_button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  .skeleton_button {
+    width: 90px;
+    height: 15px;
+  }
+
+}
+
+@media (max-width: 800px) {
+  .container {
+    .skeleton {}
+  }
+}

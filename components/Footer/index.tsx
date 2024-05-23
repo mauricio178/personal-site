@@ -23,7 +23,6 @@ export function Footer() {
                 top: (elCoordenadas.y),
                 behavior: 'smooth'
             })
-            console.log('getintouch')
         }
         if (section === 'techs') {
             let elCoordenadas2 = techs!.getBoundingClientRect();
@@ -31,7 +30,6 @@ export function Footer() {
                 top: (elCoordenadas2.y - elCoordenadas2.y),
                 behavior: 'smooth'
             })
-            console.log('techs', elCoordenadas2)
 
         }
         if (section === 'aboutme') {
@@ -40,7 +38,6 @@ export function Footer() {
                 top: (elCoordenadas3.y - 20),
                 behavior: 'smooth'
             })
-            console.log('aboutme')
         }
         if (section === 'whatido') {
             let elCoordenadas4 = whatido!.getBoundingClientRect();
@@ -48,7 +45,6 @@ export function Footer() {
                 top: (elCoordenadas4.y - 20),
                 behavior: 'smooth'
             })
-            console.log('whatido')
         }
         if (section === 'top') {
             let elCoordenadas5 = top!.getBoundingClientRect();
@@ -57,7 +53,6 @@ export function Footer() {
                 behavior: 'smooth'
             })
 
-            console.log('top')
         }
         if (section === 'works') {
             let elCoordenadas6 = works!.getBoundingClientRect();
@@ -65,7 +60,6 @@ export function Footer() {
                 top: (elCoordenadas6.y),
                 behavior: 'smooth'
             })
-            console.log('works')
         }
     }
 
@@ -94,7 +88,7 @@ export function Footer() {
                             </div>
                             <div className={styles.mail}>
                                 <Image src={'/mail.png'} alt={'mail'} width={'30'} height={'30'} />
-                                <a  href="mailto:mauriciodev178@gmail.com?subject=Write something." target="_blank">Send a mail</a>
+                                <a href="mailto:mauriciodev178@gmail.com?subject=Write something." target="_blank">Send a mail</a>
                             </div>
                         </div>
                     </div>
