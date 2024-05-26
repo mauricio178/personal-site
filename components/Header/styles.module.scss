@@ -19,6 +19,27 @@
 
 
     }
+
+    .switch {
+        position: fixed;
+        top: 90vh;
+        z-index: 999999999999;
+        opacity: .8;
+
+        img {
+            width: 46px;
+            height: 32px;
+            border-radius: 25%;
+            padding: 2px
+        }
+    }
+}
+
+@media (max-width: 800px) {
+
+    .switch {
+        margin-left: 54px;
+    }
 }
 
 

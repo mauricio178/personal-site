@@ -14,6 +14,7 @@ import styles from '../styles/Home.module.scss'
 import { AllTextProps, allTextsPortuguese, allTextsEnglish } from '../services/variables'
 import Skeleton from 'react-loading-skeleton'
 import { SkeletonComponent } from '../components/SkeletonComponent'
+import { SwitchToggle } from '../components/SwitchToggle'
 
 export default function Home() {
 
@@ -170,7 +171,6 @@ export default function Home() {
       </div>
 
       <Footer />
-
 
     </div>
   )

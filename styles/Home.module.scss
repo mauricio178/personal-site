@@ -1,5 +1,6 @@
 .container {
     background-color: var(--white);
+    position: relative;
 }
 
 .hello {
@@ -376,6 +377,7 @@
         }
     }
 }
+
 
 @media (max-width: 800px) {
     .hello {

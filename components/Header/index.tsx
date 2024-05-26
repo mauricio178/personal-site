@@ -48,11 +48,16 @@ export function Header() {
             <div>
                 <Image src={'/favicon.ico'} alt={'logo'} width={'50'} height={'50'} />
 
-                <SwitchToggle
-                    language={languageSelected.language}
-                    type="checkbox" onChange={() => {
-                        changeLanguage()
-                    }} />
+                <div className={styles.switch}>
+                    <SwitchToggle
+                        language={languageSelected.language}
+                        type="checkbox"
+                        onChange={() => {
+                            changeLanguage()
+                        }}
+                    />
+                </div>
+
 
                 <div>
                     <Button

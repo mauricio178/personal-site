@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import styles from './styles.module.scss';
 
 interface SwitchToggleProps {
@@ -10,6 +11,19 @@ export function SwitchToggle(props: SwitchToggleProps) {
 
     const { language, type, onChange } = props
 
+    const [loading, setLoading] = useState<boolean>(false)
+
+    useEffect(() => {
+        setLoading(true);
+
+        const timer = setTimeout(() => {
+
+            setLoading(false);
+        }, 2000);
+
+        return () => clearTimeout(timer);
+    }, [language]);
+
     return (
         <label className={styles.switch}>
             <input
@@ -21,10 +35,10 @@ export function SwitchToggle(props: SwitchToggleProps) {
                 }}
             />
 
-            <img
-                src={language === "br" ? "bandeira-do-brasil.png" : "bandeira-estados-unidos.png"}
-                width={54}
-                height={35}
+            <img src={
+                loading ? "loading.gif" :
+                    language === "br" ?
+                        "bandeira-do-brasil.png" : "bandeira-estados-unidos.png"}
                 className={styles.slider}
             />
         </label>
