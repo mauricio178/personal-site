@@ -13,16 +13,16 @@ export const allTextsEnglish =
   {
     top: {
       hi_there: "Hi there!",
-      i_am: { name: "I'm Mauricio Rodrigues and i'm a", profession: "Front-end Engineer/Developer." },
-      its_pleasure: "it's a pleasure to welcome you here"
+      i_am: { name: "I'm Mauricio Rodrigues", profession: "a Front-end Engineer/Developer." },
+      its_pleasure: "it's a pleasure to welcome you here. "
     }
   } as AllTextProps;
 
 export const allTextsPortuguese =
   {
     top: {
-      hi_there: "Opa tudo bom?",
-      i_am: { name: "Me chamo Mauricio Rodrigues", profession: "sou Engenheiro/Desenvolvedor Front-end" },
-      its_pleasure: "é uma satisfação receber você aqui"
+      hi_there: "Olá!",
+      i_am: { name: "Sou Mauricio Rodrigues", profession: "um Engenheiro/Dev Front-end" },
+      its_pleasure: "é uma satisfação receber você aqui."
     }
   } as AllTextProps;

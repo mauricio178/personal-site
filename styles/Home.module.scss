@@ -17,14 +17,14 @@
         width: 80%;
 
         h1 {
-            font-size: 3.2rem;
+            font-size: 3.0rem;
             color: var(--white);
             letter-spacing: 4px;
             margin-bottom: 2rem;
         }
 
         h3 {
-            font-size: 2.5rem;
+            font-size: 2.4rem;
             font-weight: 100;
             line-height: 1.4;
             letter-spacing: 2px;
@@ -33,15 +33,10 @@
             >span {
                 font-weight: bold;
             }
-
-            &:hover {
-                transition: .3s;
-                letter-spacing: 3px;
-            }
         }
 
         p {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 100;
             padding-top: 2rem;
             color: var(--white);
@@ -419,7 +414,7 @@
     }
 
     .whatido {
-        
+
 
         >div {
 
@@ -432,7 +427,7 @@
                 padding-bottom: 1rem;
             }
 
-            >h2{
+            >h2 {
                 font-size: 1rem;
                 font-weight: 100;
             }
@@ -454,7 +449,7 @@
         >h3 {
             font-size: 1rem;
             margin-bottom: 2rem;
-            
+
         }
 
         .listWorks {

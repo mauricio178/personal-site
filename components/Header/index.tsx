@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { LanguageProps, useControls } from '../../hooks/controls';
 import { Input } from '../Input';
 import { SkeletonComponent } from '../SkeletonComponent';
+import { SwitchToggle } from '../SwitchToggle';
 
 export function Header() {
 
@@ -47,20 +48,11 @@ export function Header() {
             <div>
                 <Image src={'/favicon.ico'} alt={'logo'} width={'50'} height={'50'} />
 
-                <label className={styles.switch}>
-                    <input
-                        defaultValue={languageSelected.language}
-                        type="checkbox"
-                        value={languageSelected.language}
-                        onChange={() => {
-                            changeLanguage()
-                        }}
-                    />
-                    <div className={styles.slider} />
-                    <p className={styles.selectedLanguage}>
-                        {languageSelected.language}
-                    </p>
-                </label>
+                <SwitchToggle
+                    language={languageSelected.language}
+                    type="checkbox" onChange={() => {
+                        changeLanguage()
+                    }} />
 
                 <div>
                     <Button
